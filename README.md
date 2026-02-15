@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Core Philosophy
+## Purpose
 
 Most study planners are simple to-do lists.
 
@@ -18,7 +18,7 @@ Most study planners are simple to-do lists.
 
 ---
 
-## ✨ Features
+## Features->
 
 - Profile setup & edit  
 - Subject management  
@@ -35,7 +35,7 @@ Most study planners are simple to-do lists.
 
 ---
 
-## 🛠 Built With
+## Built With
 
 - HTML5  
 - Modern CSS (variables + animations)  
@@ -46,14 +46,14 @@ _No frameworks. No AI. No dependencies._
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
 https://github.com/ACHILESCH/deadline_feed.git
 
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 DEADLINE_FEED/
 │
@@ -65,7 +65,7 @@ DEADLINE_FEED/
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Drag & drop task reordering  
 - Productivity analytics dashboard  
@@ -75,6 +75,6 @@ DEADLINE_FEED/
 
 ---
 
-## 👤 Author
+## Author
 
 Akhilesh Samantaray
