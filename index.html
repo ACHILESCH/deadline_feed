@@ -4,82 +4,86 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DEADLINE_FEED</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body class="dark">
 <div class="app">
 
-<header>
-  <h1 id="welcomeTitle">DEADLINE_FEED</h1>
+  <!-- HEADER -->
+  <header>
+    <div class="header-left"><h1>DEADLINE_FEED</h1></div>
+    <div class="header-center"><span id="welcomeTitle">Hey, User</span></div>
+    <div class="header-right">
+      <button id="profileBtn">Profile</button>
+      <button id="addTaskBtn">+ ADD TASK</button>
+      <button id="viewTasksBtn" class="active-btn">Active Tasks</button>
+      <button id="viewCompletedBtn">Completed Tasks</button>
+      <button id="themeToggle">🌙</button>
+    </div>
+  </header>
 
-  <div>
-    <button id="themeToggle">🌙</button>
-    <button id="editProfileBtn">Profile</button>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Subjects & Chapters</h3>
+    <ul id="subjectsList"></ul>
+    <div class="sidebar-buttons">
+      <button id="addSubjectBtn">+ Add Subject</button>
+      <button id="addChapterBtn">+ Add Chapter</button>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section id="activeBoardContainer" class="task-section">
+      <div id="taskBoard"></div>
+    </section>
+    <section id="completedBoardContainer" class="task-section hidden">
+      <div id="completedBoard"></div>
+    </section>
+  </main>
+
+  <!-- PROFILE MODAL -->
+  <div id="profileModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Profile</h2>
+      <input type="text" id="profileName" placeholder="Enter Your Name">
+      <div class="modal-buttons">
+        <button id="saveProfileBtn">Save</button>
+        <button id="closeProfileModal">Cancel</button>
+      </div>
+    </div>
   </div>
-</header>
 
-<aside class="sidebar">
-  <h3>Subjects</h3>
-  <div id="subjectsList"></div>
-  <button id="addSubjectBtn">+ Add Subject</button>
-</aside>
-
-<main>
-  <div class="tasks-header">
-    <h2>Tasks</h2>
-    <button id="openTaskModal">+ ADD TASK</button>
+  <!-- TASK MODAL -->
+  <div id="taskModal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="taskModalTitle">Add Task</h2>
+      <label>Subject</label>
+      <select id="taskSubject"></select>
+      <label>Chapter</label>
+      <select id="taskChapter"></select>
+      <label>Task Name</label>
+      <input type="text" id="taskTitle" placeholder="Enter task name">
+      <label>Description</label>
+      <textarea id="taskDesc" placeholder="Enter description"></textarea>
+      <label>Difficulty</label>
+      <div id="starRating" class="stars"></div>
+      <label>Deadline</label>
+      <input type="datetime-local" id="taskDeadline">
+      <div class="modal-buttons">
+        <button id="saveTaskBtn">Save</button>
+        <button id="closeTaskModal">Cancel</button>
+      </div>
+    </div>
   </div>
 
-  <section id="taskBoard"></section>
-
-  <h3>Completed</h3>
-  <section id="completedBoard"></section>
-</main>
+  <!-- CONTEXT MENU -->
+  <div id="contextMenu" class="context-menu hidden">
+    <button id="editTaskBtn">Edit</button>
+    <button id="deleteTaskBtn">Delete</button>
+  </div>
 
 </div>
-
-<!-- TASK MODAL -->
-<div id="taskModal" class="modal hidden">
-  <div class="modal-content">
-    <h2>Create Task</h2>
-
-    <label>Subject</label>
-    <select id="taskSubject"></select>
-
-    <label>Chapter</label>
-    <select id="taskChapter"></select>
-
-    <input type="text" id="taskTitle" placeholder="Task Name">
-    <textarea id="taskDesc" placeholder="Description"></textarea>
-
-    <label>Urgency</label>
-    <div id="starRating" class="stars"></div>
-
-    <label>Deadline</label>
-    <input type="datetime-local" id="taskDeadline">
-
-    <button id="saveTaskBtn">Save Task</button>
-    <button id="closeTaskModal">Cancel</button>
-  </div>
-</div>
-
-<!-- PROFILE MODAL -->
-<div id="profileModal" class="modal hidden">
-  <div class="modal-content">
-    <h2>Profile</h2>
-    <input type="text" id="profileName" placeholder="Your Name">
-    <button id="saveProfileBtn">Save</button>
-  </div>
-</div>
-
-<!-- RIGHT CLICK MENU -->
-<div id="contextMenu" class="context-menu hidden">
-  <button id="editTaskBtn">Edit</button>
-  <button id="deleteTaskBtn">Delete</button>
-</div>
-
 <script src="app.js"></script>
 </body>
 </html>
