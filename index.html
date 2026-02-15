@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEADLINE_FEED</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+<header>
+  <h1 id="welcomeTitle">DEADLINE_FEED</h1>
+
+  <div>
+    <button id="themeToggle">🌙</button>
+    <button id="editProfileBtn">Profile</button>
+  </div>
+</header>
+
+<aside class="sidebar">
+  <h3>Subjects</h3>
+  <div id="subjectsList"></div>
+  <button id="addSubjectBtn">+ Add Subject</button>
+</aside>
+
+<main>
+  <div class="tasks-header">
+    <h2>Tasks</h2>
+    <button id="openTaskModal">+ ADD TASK</button>
+  </div>
+
+  <section id="taskBoard"></section>
+
+  <h3>Completed</h3>
+  <section id="completedBoard"></section>
+</main>
+
+</div>
+
+<!-- TASK MODAL -->
+<div id="taskModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Create Task</h2>
+
+    <label>Subject</label>
+    <select id="taskSubject"></select>
+
+    <label>Chapter</label>
+    <select id="taskChapter"></select>
+
+    <input type="text" id="taskTitle" placeholder="Task Name">
+    <textarea id="taskDesc" placeholder="Description"></textarea>
+
+    <label>Urgency</label>
+    <div id="starRating" class="stars"></div>
+
+    <label>Deadline</label>
+    <input type="datetime-local" id="taskDeadline">
+
+    <button id="saveTaskBtn">Save Task</button>
+    <button id="closeTaskModal">Cancel</button>
+  </div>
+</div>
+
+<!-- PROFILE MODAL -->
+<div id="profileModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Profile</h2>
+    <input type="text" id="profileName" placeholder="Your Name">
+    <button id="saveProfileBtn">Save</button>
+  </div>
+</div>
+
+<!-- RIGHT CLICK MENU -->
+<div id="contextMenu" class="context-menu hidden">
+  <button id="editTaskBtn">Edit</button>
+  <button id="deleteTaskBtn">Delete</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
